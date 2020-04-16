@@ -1,0 +1,204 @@
+\appendix
+\section{$\delta_z$ real or purely imaginary}
+\label{kzreal}
+Starting from
+\[
+\begin{array}{rcl}
+F''(z)
++
+k_z^2
+F(z)&=&0\\
+\displaystyle
+F'(0)+\left(
+\frac{1}{2 D_0}-\frac{gk_x^2}{\Omega^2}
+\right) F(0)&=&0\\[4mm]
+\displaystyle
+F(-H)&=&0
+\end{array}
+\]
+with $\displaystyle k_z^2=\left(k_x^2\frac{N^2-\Omega^2}{\Omega^2}
++\frac{\Omega^2}{c_s^2}-\frac{1}{4D_0^2}\right)$.\\
+Let $\displaystyle s=\frac{z+H}{H}$ and $G(s(z))=F(z)$ we write:
+\[
+\begin{array}{rcl}
+G''(s)
++
+(Hk_z)^2
+G(s)&=&0\\
+\displaystyle
+G'(1)+\left(
+\frac{H}{2 D_0}-\frac{gHk_x^2}{\Omega^2}
+\right) G(1)&=&0\\[4mm]
+\displaystyle
+G(0)&=&0
+\end{array}
+\]
+Introducing $\displaystyle \epsilon_i^2=\frac{N^2H}{g}, \epsilon_a^2=\frac{gH}{c_s^2},\delta_x=k_xH,\delta_z=k_zH,\omega=\Omega\sqrt{\frac{H}{g}}$ and using $\displaystyle \frac{H}{D_0}=\epsilon_i^2+\epsilon_a^2$
+\begin{align}
+G''(s)
++
+\delta_z^2
+G(s)&=0 \label{sturm1}\\
+G'(1)+\left(
+\frac{\epsilon_i^2+\epsilon_a^2}{2}-\frac{\delta_x^2}{\omega^2}
+\right) G(1)&=0 \label{sturm2}\\
+G(0)&=0 \label{sturm3}
+\end{align}
+with $\displaystyle \delta_z^2=\left(\delta_x^2\frac{\epsilon_i^2-\omega^2}{\omega^2}
++\epsilon_a^2\omega^2-\frac{(\epsilon_i^2+\epsilon_a^2)^2}{4}\right)$\\
+Multiplying \ref{sturm1} by $\overline{G(s)}$ and integrating over $[0,1]$ we get:
+\[
+\int_0^1G''(s)\overline{G(s)}+\delta_z^2\int_0^1|G(s)|^2=0
+\]
+\[
+-\int_0^1|G'(s)|^2+\delta_z^2\int_0^1|G(s)|^2+G'(1)\overline{G(1)}-G'(0)\overline{G(0)}=0
+\]
+and using \ref{sturm2}, \ref{sturm3}
+\[
+\delta_z^2 \int_0^1|G(s)|^2+\left(\frac{\delta_x^2}{\omega^2}-
+\frac{\epsilon_i^2+\epsilon_a^2}{2}
+\right)|G(1)|^2=\int_0^1|G'(s)|^2
+\]
+Using the Poincar\'e inequality $\displaystyle \int_0^1|G(s)|^2\le \int_{0}^1|G'(\sigma)|^2d\sigma$ and $\displaystyle |G(1)|^2 \le \int_{0}^1|G'(\sigma)|^2d\sigma$, we obtain:
+\begin{equation}
+\delta_z^2 \mu + \left(
+\frac{\delta_x^2}{\omega^2}-\frac{\epsilon_i^2+\epsilon_a^2}{2}
+\right)
+\nu = 1
+\label{sturm4}
+\end{equation}
+with $\mu \le 1$ and $\nu \le 1$.\\
+Taking the imaginary part of \ref{sturm4}
+\[
+\mu \left( \epsilon_a^2 \Im[\omega^2] +\delta_x^2 \epsilon_i^2 \Im[1/\omega^2]\right)+\nu \delta_x^2\Im[1/\omega^2]=0
+\]
+or, using $\Im[1/\omega^2]=-\Im[\omega^2]/|\omega|^4$,
+\[
+\Im[\omega^2]\left(\mu \left(\epsilon_a^2 -\epsilon_i^2 \frac{\delta_x^2}{|\omega|^4} \right) -\nu \frac{\delta_x^2}{|\omega|^4} \right)=0
+\]
+Let's suppose that $\Im[\omega^2] \ne 0$. We will show below that, in this case, solutions can exist only for non physical values of $\epsilon_i, \epsilon_a$ satisfying $\max(\epsilon_i,\epsilon_a) > \sqrt{2}$.\\
+If $\Im[\omega^2] \ne 0$, we deduce that
+\begin{equation}
+\mu\left(\epsilon_a^2\frac{|\omega|^4}{\delta_x^2} -\epsilon_i^2\right)-\nu=0
+\label{eqmunu1}
+\end{equation}
+Now taking the real part:
+\[
+\mu \left(-\delta_x^2+\delta_x^2\epsilon_i^2\Re[1/\omega^2]-\frac{(\epsilon_i^2+\epsilon_a^2)^2}{4}+\epsilon_a^2 \Re[\omega^2]\right)
++\nu \left(
+\delta_x^2 \Re[\frac{1}{\omega^2}]-\frac{\epsilon_i^2+\epsilon_a^2}{2}
+\right)=1
+\]
+or, using $\Re[1/\omega^2]=\Re[\omega^2]/|\omega|^4$,
+\[
+\mu \left(-\delta_x^2-\frac{(\epsilon_i^2+\epsilon_a^2)^2}{4}+(\frac{\delta_x^2\epsilon_i^2}{|\omega|^4}+\epsilon_a^2 )\Re[\omega^2]\right)
++\nu \left(
+\frac{\delta_x^2}{|\omega|^4} \Re[\omega^2]-\frac{\epsilon_i^2+\epsilon_a^2}{2}
+\right)=1
+\]
+or using \ref{eqmunu1}
+\begin{equation}
+\mu \left(-\delta_x^2-\frac{(\epsilon_i^2+\epsilon_a^2)^2}{4}+2\epsilon_a^2\Re[\omega^2] \right)
+-\nu \left(
+\frac{\epsilon_i^2+\epsilon_a^2}{2}
+\right)=1
+\label{eqmunu2}
+\end{equation}
+Note that \ref{eqmunu2} implies $\Re[\omega^2]\ge 0$.\\
+Eqs \ref{eqmunu2} and \ref{eqmunu1} are summarized in 
+\begin{equation}
+\begin{array}{l}
+\alpha \mu  - \beta \nu = 1\\
+\gamma \mu - \nu=0
+\end{array}
+\label{eqmunu}
+\end{equation}
+with
+\[
+\alpha= -\delta_x^2-\frac{(\epsilon_i^2+\epsilon_a^2)^2}{4}+2\epsilon_a^2\Re[\omega^2], \beta = \frac{\epsilon_i^2+\epsilon_a^2}{2}, \gamma =  \epsilon_a^2\frac{|\omega|^4}{\delta_x^2} -\epsilon_i^2
+\]
+Using $\beta > 0$, it is easy to check that \ref{eqmunu} has solutions $(\mu,\nu)$ positive and with magnitude less than one only if
+\[
+\gamma>1 \mbox{ and }\alpha > (1 + \beta ) \gamma
+\]
+or
+\[
+0\le \gamma\le 1 \mbox{ and }\alpha > 1 + \beta \gamma
+\]
+And so in order to have $\Im[\omega^2]\ne 0$, the conditions above immediately exclude the cases $\epsilon_a=0$ (which leads to $\gamma \le 0$ ) and $\Re[\omega^2] \le 0$ (which leads to $\alpha \le 0$ ). They will not be considered below.
+\begin{itemize}
+	\item First case: $0\le \gamma \le 1$\\
+	This implies:
+	\begin{equation}
+	|\omega|^4 \le \frac{\delta_x^2}{\epsilon_a^2}(1+\epsilon_i^2)
+	\label{maj1}
+	\end{equation}
+	$\alpha > 1 + \beta \gamma$ writes:
+	\[
+	\Re[\omega^2] > \frac{1}{2\epsilon_a^2}\left[
+	1+\delta_x^2+\frac{(\epsilon_a^2+\epsilon_i^2)^2}{4}
+	+\frac{\epsilon_i^2+\epsilon_a^2}{2}\left(
+	\epsilon_a^2\frac{|\omega|^4}{\delta_x^2} -\epsilon_i^2
+	\right)
+	\right]
+	\]
+	Now using the inequalities $|\Re[\omega^2]|^2 \le |\omega|^4$ and \ref{maj1}, we get
+	\begin{equation}
+	\frac{\delta_x^2}{\epsilon_a^2}(1+\epsilon_i^2)
+	\ge
+	|\omega|^4
+	\ge 
+	\left(
+	\frac{1}{2\epsilon_a^2}\left[
+	1+\delta_x^2+\frac{(\epsilon_a^2+\epsilon_i^2)^2}{4}
+	+\frac{\epsilon_i^2+\epsilon_a^2}{2}\left(
+	\epsilon_a^2\frac{|\omega|^4}{\delta_x^2} -\epsilon_i^2
+	\right)
+	\right]
+	\right)^2
+	\label{systeme1}
+	\end{equation}
+	Using a computing algebra software to simplify the technical exercice, we can prove that \ref{systeme1} has solutions if and only if
+	\[
+	\epsilon_i^2 > \sqrt{4+\epsilon_a^4}
+	\]
+	which requires $\epsilon_i > \sqrt{2}$.
+	\item Second case: $\gamma > 1$\\
+	This implies:
+	\begin{equation}
+	|\omega|^4 \ge \frac{\delta_x^2}{\epsilon_a^2}(1+\epsilon_i^2)
+	\label{maj2}
+	\end{equation}
+	$\alpha > (1 + \beta ) \gamma$ can be written as:
+	\[
+	\gamma < \frac{\alpha}{1+\beta}
+	\]
+	or
+	\[
+	|\omega|^4 \le \frac{\delta_x^2}{\epsilon_a^2}\left[
+	\epsilon_i^2
+	+\frac{1}{1+\frac{\epsilon_a^2+\epsilon_i^2}{2}}
+	\left(
+	-\delta_x^2-\frac{(\epsilon_i^2+\epsilon_a^2)^2}{4}+2\epsilon_a^2\Re[\omega^2]
+	\right)
+	\right]
+	\]
+	Now using $0 \le \Re[\omega^2] \le |\omega|^2$ and adding \ref{maj2}, we get:
+	\[
+	\frac{\delta_x^2}{\epsilon_a^2}(1+\epsilon_i^2)
+	\le
+	|\omega|^4 \le \frac{\delta_x^2}{\epsilon_a^2}\left[
+	\epsilon_i^2
+	+\frac{1}{1+\frac{\epsilon_a^2+\epsilon_i^2}{2}}
+	\left(
+	-\delta_x^2-\frac{(\epsilon_i^2+\epsilon_a^2)^2}{4}+2\epsilon_a^2|\omega|^2
+	\right)
+	\right]
+	\]
+	which has non trivial solutions if and only if
+	\[
+	\epsilon_a^2 > 2+ \epsilon_i^2
+	\]
+	which requires $\epsilon_a > \sqrt{2}$.
+\end{itemize}
+This concludes the proof. Adding the condition $\epsilon_a \ne 0$, we get. If $\epsilon_a=0$ or $\max(\epsilon_i,\epsilon_a)\le \sqrt{2}$, then $\Im[\omega^2]$ is zero. This also leads to $\Im[\delta_z^2]=0$ and so that $\delta_z$ is either real or purely imaginary.
