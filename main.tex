@@ -57,7 +57,12 @@
 %package floatend
 
 \usepackage{booktabs}
-
+\newcommand{\nhi}[1]{%
+	{\itshape \color{magenta} (NHI approx: {#1})}
+}
+\newcommand{\hi}[1]{%
+	{\itshape \color{cyan} (HI approx: {#1})}
+}
 %----------------------------------------------------------------------------
 % Packages: uncomment to debug
 %----------------------------------------------------------------------------
@@ -98,13 +103,11 @@
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \author[1]{F. Auclair\thanks{Corresponding author: francis.auclair@aero.obs-mip.fr}}
-%\author[2]{X. Capet}
-\author[2]{E. Duval}
 \author[2]{L. Debreu}
+\author[2]{E. Duval}
 \author[3]{P. Marchesiello}
 \author[2]{E. Blayo}
 \author[1]{M. Hilt}
-%\author[4]{F. Dumas}
 
 %\author[5]{P. Marchesiello}
 %\author[1]{C. Nguyen}
