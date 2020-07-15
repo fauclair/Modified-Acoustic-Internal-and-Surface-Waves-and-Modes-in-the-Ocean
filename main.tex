@@ -55,7 +55,7 @@
 \usepackage{subfig}
 %\usepackage{graphicx}
 %package floatend
-
+\usepackage{lineno}
 \usepackage{booktabs}
 \newcommand{\nhi}[1]{%
 	{\itshape \color{magenta} (NHI approx: {#1})}
@@ -127,7 +127,7 @@
 %\address[affilIFREMER]{Ifremer, Univ. Brest, CNRS, IRD, Laboratoire d'Océanographie Physique et Spatiale (LOPS), IUEM, F- 29280, Plouzan\'e, France}
 %
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
+\linenumbers
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{document}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -292,7 +292,6 @@ In the section \oldref{SectionLinModels}, a linear model of ocean wave propagati
 \label{SubSectionNSModel}
 
 Ocean dynamics can be described with a small number of macroscopic variables: velocity $(\mathbf{v})$, pressure and density ($p$ and $\rho$), temperature and salinity ($T$ and $S$). In a Cartesian framework, the general equations governing the motion of a compressible, viscous ocean are then:
-{\color{red}PAS CORIOLIS}
 %
 \begin{subequations}
  \begin{alignat}{2}
@@ -311,12 +310,12 @@ Ocean dynamics can be described with a small number of macroscopic variables: ve
  +\rho \mathbf{g}\\
  %
  \label{NS_c}
- & \frac{\partial T}{\partial t} &&=-\mathbf{\nabla}\cdot(T\mathbf{v})
- +\mathbf{\nabla}\cdot\kappa_T\mathbf{\nabla}{T}\\[3mm]
+ & \frac{\partial \rho T}{\partial t} &&=-\mathbf{\nabla}\cdot( \rho T\mathbf{v})
+ +\rho \mathbf{\nabla}\cdot\kappa_T\mathbf{\nabla}{T}\\[3mm]
  %
  \label{NS_d}
- & \frac{\partial S}{\partial t} &&=-\mathbf{\nabla}\cdot(S\mathbf{v})
- +\mathbf{\nabla}\cdot\kappa_S\mathbf{\nabla}{S}\\[3mm]
+ & \frac{\partial \rho S}{\partial t} &&=-\mathbf{\nabla}\cdot(\rho S\mathbf{v})
+ +\rho \mathbf{\nabla}\cdot\kappa_S\mathbf{\nabla}{S}\\[3mm]
  \label{NS_e}
  & \rho &&= \rho(T,S,p)
  %
@@ -528,8 +527,8 @@ with the (flat) bottom and surface conditions:
 %
 As in \cite{dukowicz_2013}, in the following, we will express part of the results in terms of $D(z)$, a vertical length scale associated with stratification, defined by $\displaystyle \frac{1}{D(z)}=\frac{N^2(z)}{g}+\frac{g}{c_s^2}$. The background stratification satisfies $\displaystyle \frac{\partial \hat{\rho}_h(z)}{\partial z}=-\frac{1}{D(z)}\, \hat{\rho}_h(z)$.
 
-\subsection{General propagation equation and polarization}
-
+\subsection{General propagation equation and polarization relations}
+\label{GPE}
 \paragraph{Form of wave solutions}
 Dispersion relations can be derived by postulating and specifying the wave form. Horizontally-propagating surface waves, wave modes propagating in the ocean wave guide, internal wave rays and acoustic waves all satisfy the following "polarization" relations:
 \label{SubSectionPropag}
@@ -598,7 +597,7 @@ To obtain this relation and in particular to eliminate its pressure dependence, 
    \label{lamb0}
 \end{equation}
 %
-which is the dispersion relation for acoustic Lamb waves in the atmosphere \citep{apel_principles_1987}. As for the atmospheric case, it can be shown that these waves are characterized by $W(z)=0, P(z)=P_0\, e^{-g z/c_s^2}$. However, the surface boundary condition \ref{WM_bc_b} constrains $P_0$ to be zero and only the trivial null solution is obtained. Therefore, Lamb waves do not exist in the ocean and, as pointed out by several authors, they are replaced by surface gravity waves, discussed later.\bigskip\\
+which is the dispersion relation for acoustic Lamb waves in the atmosphere \citep{apel_principles_1987}. As for the atmospheric case, it can be shown that these waves are characterized by $\widetilde{W}(z)=0, \widetilde{p}(z)=P_0\, e^{-g z/c_s^2}$. However, the free surface boundary condition \ref{WM_bc_b} constrains $P_0$ to be zero and only the trivial null solution is obtained. Therefore, Lamb waves do not exist in a free surface ocean and, as pointed out by several authors, they are replaced by surface gravity waves, discussed later (see \ref{SubSectionLongWavesrealdz}).\bigskip\\
 %
 \textit{Stratification-induced change of variables}\\
 To remove first-order terms and simplify future developments, the following change of variable can be made:
@@ -892,7 +891,10 @@ Therefore, $\omega_a$ can be interpreted as a  \textit{reference acoustic functi
 %When $\epsilon_i$ tends in turn toward zero (weak stratifications), $\omega_i$ approaches zero and the second term of \ref{eqlink} vanishes if the pulsation $\omega$ remains finite. 
 %\\
 
-Recall that we consider only regular solutions for which the frequency $\omega$ is real and $\delta z$ is either real or purely imaginary. In addition, $\omega_a^2$ and $\omega_i^2$ have the same sign, since their product is equal to $\delta_x^2\frac{\epsilon_i^2}{\epsilon_a^2} > 0$. Therefore \ref{eqlink} implies that $\omega_a^2\ge 0, \omega_i^2 \ge 0$, and that:
+Recall that we consider only regular solutions for which the frequency $\omega$ is real and $\delta z$ is either real or purely imaginary.
+%In addition, $\omega_a^2$ and $\omega_i^2$ have the same sign, since their product is equal to $\delta_x^2\frac{\epsilon_i^2}{\epsilon_a^2} > 0$.
+Therefore \ref{eqlink} implies:
+% that $\omega_a^2\ge 0, \omega_i^2 \ge 0$, and that:
 \[
 \omega_i^2(\delta_x, \delta_z)\le \omega^2(\delta_x, \delta_z) \le \omega_a^2(\delta_x, \delta_z) \qquad\forall (\delta_x, \delta_z)
 \]
@@ -1047,9 +1049,9 @@ Compared with $\omega_i^2$, $\omega_-^2$ includes corrective terms due to the tw
 %The first corrective term can only reduce the pulsation, the last term can only increase it. However it can be shown that the combined effect is always a reduction of the pulsation, i.e. $\omega_{-}^2 \le \omega_{iwr}^2$. We postpone the discussion on the compressibilty effects on the pulsation in the section on bounded ocean. Indeed, as can be seen on Eq. \ref{DispRaysDT} this effect is strongly dependent on the vertical wavenumber $\delta_z$ whose possible values are limited in the bounded ocean cases.\\
 
 Ocean waves satisfying \ref{DispRaysDT} will now be referred to as \textit{Modified Internal Waves (MIW)}.
-\\
+%\\
 
-{\color{red}AJOUTER PLOTS DE $\omega_-^2/\omega_{iwr}^2$ pour differentes valeurs de epsi, epsa}
+%{\color{red}AJOUTER PLOTS DE $\omega_-^2/\omega_{iwr}^2$ pour differentes valeurs de epsi, epsa}
 
 \paragraph{Modified acoustic waves (MAW)}
 The well-known dispersion relation for acoustic waves in an homogeneous fluid is:
@@ -1087,7 +1089,7 @@ Ocean waves satisfying \ref{DispAcousDT} will be called \textit{Modified Acousti
 \omega_+^2\omega_-^2=\frac{\epsilon_i^2}{\epsilon_a^2}\delta_x^2=\omega_{aw}^2\omega_{iwr}^2,
 \]
 which explains the symmetry in the above developments for modified internal and acoustic waves.
-{\color{red}AJOUTER PLOTS DE $\omega_+^2/\omega_{aw}^2$ pour differentes valeus de epsi, epsa}
+%{\color{red}AJOUTER PLOTS DE $\omega_+^2/\omega_{aw}^2$ pour differentes valeus de epsi, epsa}
 
 \subsubsection{Purely imaginary vertical wavenumber $(\delta_z\in i\ 
 \mathbb{R})$}
@@ -1126,7 +1128,7 @@ Relation \ref{EqFullDisperai} imposes $0\le \delta_{z,i}^2\le \delta_x^2+\frac{(
 %
 for which the inner dispersion relation has a double root $\displaystyle \omega_+^2 = \omega_-^2 = \frac{\epsilon_i}{\epsilon_a}\delta_x$.
 When $\delta_{z,i}$ is less than $\delta_{z,i,\star}$, the two roots become separated.
-Again, since we look only at regular solutions, the case $\delta_{z,i}^2>\delta_{z,i,\star}^2$, which would lead to $R^2 > 1/4$ is not considered.
+Again, since we have proved in appendix that only regular solutions with real frequency can exist (when the domain is bounded), the case $\delta_{z,i}^2>\delta_{z,i,\star}^2$, which would lead to $R^2 > 1/4$ is not considered. Note that $\omega_-, \omega_+$ as functions of $\delta_{z,i}$ are not differentiable at the neutral point $\delta_{z,i}=\delta_{z,i,\star}$.
 
 Even if \ref{EqFullDisperai} has two roots, the two corresponding branches are always connected, as shown above, and thus form one family of ocean waves.
 Ocean waves satisfying \ref{EqFullDisperai} will be called {\it Modified Surface Waves (MSW)} in the following.
@@ -1284,7 +1286,9 @@ In a more realistic bounded ocean, their existence is guaranteed only if their v
 \input{waves_bounded}
 \input{conclusion}
 \subsection*{Acknowledgements}
-This study has received support from a consortium of French research agencies, as part of CROCO's development project (GdR CROCO). Laurent Debreu has received funding from the European Union's Horizon 2020 research and innovation program under grant agreement No. 821926 (IMMERSE). Eric Blayo, Emilie Duval and Laurent Debreu have received funding from the SHOM/DGA under grant agreement No 18CP03.
+This study has received support from a consortium of French research agencies, as part of CROCO's development project (GdR CROCO).
+%Laurent Debreu has received funding from the European Union's Horizon 2020 research and innovation program under grant agreement No. 821926 (IMMERSE).
+Eric Blayo, Emilie Duval and Laurent Debreu have received funding from the SHOM/DGA under grant agreement No 18CP03.
 \bibliographystyle{apalike}
 \bibliography{paperagwaves}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%

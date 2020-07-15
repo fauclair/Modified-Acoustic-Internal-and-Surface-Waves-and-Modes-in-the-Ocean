@@ -1,4 +1,5 @@
 \section{Analytical solutions in the constant Brunt-V\"ais\"al\"a case}
+\label{solutionana}
 Let us define a vertical velocity profile $W(z)$
 \[
 W(z)=e^{-z/(2D_0)}F(z)=e^{-z/2D_0}\frac{\sin(k_z(H+z))}{\sin (k_z H)}
@@ -7,9 +8,9 @@ and a vertical pressure profile $P(z)$
 \[
 P(z)=\frac{\Omega^2}{g^2k_x^2(1-(\Omega/(c_sk_x))^2)} \left( N^2_0W(z)+gW'(z) \right).
 \]
-with $\displaystyle \frac{1}{D_0}=\frac{N^2_0}{g}+\frac{g}{c_s^2}$\\
+with $\displaystyle \frac{1}{D_0}=\frac{N^2_0}{g}+\frac{g}{c_s^2}$, and where, for a given horizontal wavenumber $k_x$, $k_z$ and $\Omega$ are solutions of the inner and boundary dispersion relations. Highly accurate approximations of them can be found in table \ref{TableWavesolutions_boundedmodified}.\\
 Note that by construction (and using the boundary dispersion relation), we have $W(0)=P(0)=1$.\\
-The real analytical solutions of Eqns. (\oldref{WM_a}, \oldref{WM_b}, \oldref{WM_c}, \oldref{WM_d})
+The real analytical solutions of Eqs. (\oldref{WM_a}, \oldref{WM_b}, \oldref{WM_c}, \oldref{WM_d})
 which satisfy the bottom and surface conditions (\oldref{WM_bc_a}, \oldref{WM_bc_b})
 are given by:
 \begin{align}
@@ -21,19 +22,19 @@ p(x,z,t)&=\eta_0 g \hat{\rho}_h(0) \cos(k_xx)\cos(\Omega t) P(z)\\
 \cos(k_xx)\cos(\Omega t) \left(\frac{N^2_0}{g^2} W(z)+\frac{1}{c_s^2}P(z)
 \right)
 \end{align}
-with $\hat{\rho}_h(z)=\hat{\rho}_h(0)\,e^{-z/D_0}$.\\
-For an homogeneous $N^2_0 \rightarrow 0$ and incompressible ($c_s \rightarrow \infty$) (and thus $D_0\rightarrow \infty$) non hydrostatic ocean, the Airy's solutions are recovered (see e.g. (\citealt{gill_1982}, section 5.3)). Indeed $k_z=k_x, \Omega^2=gk_x\tanh (Hk_x)$ and
+with $\hat{\rho}_h(z)=\hat{\rho}_h(0)\,e^{-z/D_0}$ and $\eta_0$ a constant.\\
+For an homogeneous $N^2_0 \rightarrow 0$ and incompressible ($c_s \rightarrow \infty$, and thus $D_0\rightarrow \infty$) non hydrostatic ocean, the Airy's solutions are recovered (see e.g. (\citealt{gill_1982}, section 5.3)). Indeed $k_z=i k_x, \Omega^2=gk_x\tanh (Hk_x)$ and
 \[
-W_{\rm Airy}(z)=F_{\rm Airy}(z)=\frac{\sin(k_x(H+z))}{\sin (k_x H)},
+W_{\rm Airy}(z)=F_{\rm Airy}(z)=\frac{\sinh(k_x(H+z))}{\sinh (k_x H)},
 \quad
-P_{\rm Airy}(z)=\frac{\Omega^2}{gk_x^2} W_{Airy}'(z)=\frac{\Omega^2}{gk_x}\frac{\cos(k_x(H+z))}{\sin (k_x H)},
+P_{\rm Airy}(z)=\frac{\Omega^2}{gk_x^2} W_{Airy}'(z)=\frac{\Omega^2}{gk_x}\frac{\cosh(k_x(H+z))}{\sinh (k_x H)},
 \]
 leading to
 \begin{align}
 \eta_{\rm Airy}(x,t)&=\eta_0 \cos(k_x x)\cos(\Omega t)\\
-u_{\rm Airy}(x,z,t)&=\eta_0 \Omega \sin(k_xx)\sin(\Omega t) \frac{\cos(k_x(H+z))}{\sin (k_x H)}\\
-w_{\rm Airy}(x,z,t)&=-\eta_0 \Omega \cos(k_xx)\sin(\Omega t)\frac{\sin(k_x(H+z))}{\sin (k_x H)}\\
-p_{\rm Airy}(x,z,t)&=\hat{\rho}_h(0) g \eta_0 \cos(k_xx)\cos(\Omega t) \frac{\cos(k_x(H+z))}{\cos (k_x H)}
+u_{\rm Airy}(x,z,t)&=\eta_0 \Omega \sin(k_xx)\sin(\Omega t) \frac{\cosh(k_x(H+z))}{\sinh (k_x H)}\\
+w_{\rm Airy}(x,z,t)&=-\eta_0 \Omega \cos(k_xx)\sin(\Omega t)\frac{\sinh(k_x(H+z))}{\sinh (k_x H)}\\
+p_{\rm Airy}(x,z,t)&=\hat{\rho}_h(0) g \eta_0 \cos(k_xx)\cos(\Omega t) \frac{\cosh(k_x(H+z))}{\cosh (k_x H)}
 \\
 \rho_{\rm Airy}(x,z,t)&=0
 \end{align}

@@ -102,12 +102,7 @@ Figure \oldref{FigDisLongpSolutions} shows the different branches close to the o
 	}
 	\label{FigDisLongpSolutions}
 \end{figure}
-While for very small $\delta_x$, the boundary dispersion surface intersects the internal-wave branch (with $\delta_z$ real), for larger values, it intersects the surface-wave branch (with $\delta_z$ pure imaginary). As will be shown in section \oldref{SubSectionLongWavesrealdz}, the switch between the two intersections is at $\delta_x=\delta_{x,0}\approx \epsilon_i$ (and for a vanishing vertical wavenumber $\delta_z=0$).
-%In this figure \oldref{FigDisLongpSolutions}, the black-point intersection is the continuation for small wave-numbers of the MSW intersection in Figure \oldref{FigDispSolutions}b whereas the red-point intersection is not connected to the MIM intersection shown in Figure \oldref{FigDispSolutions}a. This continuous-by-part intersection leads to wave-solutions whatever $\delta_x$ in this region. For small values of $\delta_x$ the solution is given by the MIM branch (red points) whereas for larger values of $\delta_x$ it is given by the MSW branch (black points) and the vertical wavenumber vanishes in between these solutions.
-\\
-{\color{red}remarque ci-dessous: je vous laisse rephraser ... Duko dit (comme nous en fait) que la frequence du mode barotrope sature à $\epsilon_i$. (la phrase ci-dessous laisse penser qu'on est pas d'accord avec ca). Par contre, l'ami Duko a l'air de dire (cf Fig9.) que ce mode barotrope existe même pour des valeurs "grandes" de $\delta_x$ (ce qui parait complètement débile, puisque dans ce cas, elles sont où les ondes de surface non hydro classiques ?, quel gros naze ce Duko), alors que nous on montre que c'est seulement pour $\delta_x\le \epsilon_i$ et qu'ensuite ça passe dans la branche ondes de surface (et bien sûr on n'aurait eu que cette branche si on était partis des eqns.  Boussinesq, incompressible, comme dans les "Textbooks") cites par Dukowicz.}
-Interestingly,  and contrary to conclusions in \cite{dukowicz_2013}, the barotropic mode frequency cannot saturate at the buoyancy frequency for increasing horizontal wavenumber $\delta_x$ but transforms into a vertically evanescent surface wave, while its vertical wavenumber switches from real to purely imaginary.
-
+While for very small $\delta_x$, the boundary dispersion surface intersects the internal-wave branch (with $\delta_z$ real), for larger values, it intersects the surface-wave branch (with $\delta_z$ pure imaginary). As will be shown in section \oldref{SubSectionLongWavesrealdz}, the switch between the two intersections is at $\delta_x=\delta_{x,0}\approx \epsilon_i$ (and for a vanishing vertical wavenumber $\delta_z=0$). At these wavenumbers, we also have $\omega \approx \epsilon_i$ and thus,as mentioned in \cite{dukowicz_2013}, the barotropic mode frequency saturates at the buoyancy frequency. However for larger horizontal wavenumbers ($\delta_x \ge \epsilon_i$), a vertically evanescent surface wave is found.
 \paragraph{Summary}
 In the context of a bounded ocean, three types of wave solutions are graphically identified, spreading on the three branches of inner dispersion surface, while satisfying the boundary dispersion relation: internal gravity (in a stratified ocean), acoustic (in a compressible ocean) and surface waves (in a free-surface ocean). They are investigated in following using Taylor expansions of the general roots $\omega_{\pm}$, with respect to small parameters $(\epsilon_i,\ \epsilon_a)$, leading to simple approximations of wave dispersion relations. When needed, asymptotic relations are derived with respect to $\delta_x$, $\delta_z$ or $\omega$. Taylor expansions will give indications of how usual wave solutions can be modified by gravity and stratification $(\epsilon_i)$, and/or by compressibility $(\epsilon_a)$.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -151,18 +146,18 @@ In order to refine the approximation, we equate the squared frequency given by t
 	+\mathrm{O}	((\epsilon_i^2+\epsilon_a^2)^3)
 	\label{ParamallMIM1}
 \end{equation}
-\nhi{idem 'ordre 2 inclus}
-\hi{
-\begin{equation}
-\delta_{z}(\delta_x)=\delta_{z,mim}(\delta_x)=
-\delta_{z,n}
-\left(
-1+\frac{\epsilon_i^2}{\delta_{z,n}^2}
--\frac{1}{(\delta_{z,n}^4)}\epsilon_i^4
-\right)
-+\mathrm{O}	(\epsilon_i^6)
-\end{equation}
-}
+%\nhi{idem 'ordre 2 inclus}
+%\hi{
+%\begin{equation}
+%\delta_{z}(\delta_x)=\delta_{z,mim}(\delta_x)=
+%\delta_{z,n}
+%\left(
+%1+\frac{\epsilon_i^2}{\delta_{z,n}^2}
+%-\frac{1}{(\delta_{z,n}^4)}\epsilon_i^4
+%\right)
+%+\mathrm{O}	(\epsilon_i^6)
+%\end{equation}
+%}
 A development for the frequency $\omega^2$ can be obtained by injecting expression \ref{ParamallMIM1} of $\delta_z$ in the general expression \ref{DispRaysDT} in the unbounded domain case. The usual dispersion relation given in Table \oldref{TableWave solutions}  writes in dimensional form:
 \[
 \omega^2=\left.\omega_{iwr}^2\right|_{\delta_z=\delta_{z,n}}=\epsilon_i^2\frac{\delta_x^2}{\delta_x^2+\delta_{z,n}^2}
@@ -174,14 +169,14 @@ Considering only the first order correction to this relation, we can omit all te
 \left(1-\frac{2\epsilon_i^2\delta_{z,n}^2}{(\delta_x^2+\delta_{z,n}^2)^2}\right) +\mathrm{O}	((\epsilon_i^2+\epsilon_a^2)^3)
 \label{ParamallMIM2}
 \end{equation}
-\nhi{idem 'ordre 2 inclus}
-\hi{
-	\begin{equation}
-\omega^2(\delta_x)=\omega_{mim}^2(\delta_x)=
-\epsilon_i^2\frac{\delta_x^2}{\delta_{z,n}^2}
-\left(1-\frac{2\epsilon_i^2}{\delta_{z,n}^2}\right) +\mathrm{O}	(\epsilon_i^6)
-	\end{equation}
-}
+%\nhi{idem 'ordre 2 inclus}
+%\hi{
+%	\begin{equation}
+%\omega^2(\delta_x)=\omega_{mim}^2(\delta_x)=
+%\epsilon_i^2\frac{\delta_x^2}{\delta_{z,n}^2}
+%\left(1-\frac{2\epsilon_i^2}{\delta_{z,n}^2}\right) +\mathrm{O}	(\epsilon_i^6)
+%	\end{equation}
+%}
 Therefore, the main correction to the usual dispersion relation comes from the fact that $\delta_z$ is not exactly equal to $\delta_{z,n}=n\pi$.
 %This shows that the internal gravity modes are robust to compressibility since there is no dependency to $\epsilon_a$ at orders lower than 4. This agrees with the separation of the roots $\omega_\pm$ of the inner dispersion relation for real vertical wave-numbers.
 %\\
@@ -362,18 +357,18 @@ The crude  assumption $\delta_{z,i} \approx \delta_x$ is sufficiently accurate t
 \label{longMSW}
 \end{equation}
 
-\nhi{
-\begin{equation}
-\delta_{z,i}^2=\delta_x^2
--\delta_x\left(
-\epsilon_i^2/\tanh(\delta_x)
-\right)
-+\mathrm{O}	(\epsilon_i^4).
-\end{equation}
-}
-\hi{
-No solution
-}
+%\nhi{
+%\begin{equation}
+%\delta_{z,i}^2=\delta_x^2
+%-\delta_x\left(
+%\epsilon_i^2/\tanh(\delta_x)
+%\right)
+%+\mathrm{O}	(\epsilon_i^4).
+%\end{equation}
+%}
+%\hi{
+%No solution
+%}
 In order to obtain \ref{longMSW}, we introduce the frequency given by the boundary dispersion relation in the inner dispersion relation (see \ref{rappel-eqs-complex}) and solve the resulting nonlinear equation by performing one pass of a Newton algorithm. Note that the problem is formulated in terms of $\delta_{z,i}^2(\delta_x)$ since it can be shown (by looking at the error estimate of the Newton algorithm) that a formulation in terms of $\delta_{z,i}(\delta_x)$ is not accurate when $\delta_x$ is relatively small.
 Note also that \ref{longMSW} requires $\delta_x \ge \epsilon_i$ for $\delta_{z,i}^2$ to be positive. This is consistent with the fact that $\delta_x$ must be greater than $\delta_{x,0} (\approx \epsilon_i)$, as previously shown. However \ref{longMSW} does not allow us to recover the exact value $\delta_{x,0}$ of $\delta_x$ that cancels $\delta_{z,i}$, due to the first-order only approximation in terms of $(\epsilon_i^2+\epsilon_a^2)$. The case of long surface waves with $\delta_{z,i}$ close to zero will be treated separately in  subsection \oldref{SubSectionLongWavesrealdz}.
 \\
@@ -387,18 +382,18 @@ The corresponding frequency is well approximated by:
 \right]+\mathrm{O}	((\epsilon_i^2+\epsilon_a^2)^2)
 \label{eqomegasurfacewaves}
 \end{equation}
-\nhi{
-	\begin{equation}
-	\omega^2=\delta_x \tanh(\delta_x)
-	\left[1-\frac{1}{2}\left(
-	\epsilon_i^2/\sinh(\delta_x)^2-\epsilon_i^2/(\delta_x\sinh(\delta_x)\cosh(\delta_x)
-	\right)
-	\right]+\mathrm{O}	(\epsilon_i^4)
-	\end{equation}
-}
-\hi{
-	No solution
-}
+%\nhi{
+%	\begin{equation}
+%	\omega^2=\delta_x \tanh(\delta_x)
+%	\left[1-\frac{1}{2}\left(
+%	\epsilon_i^2/\sinh(\delta_x)^2-\epsilon_i^2/(\delta_x\sinh(\delta_x)\cosh(\delta_x)
+%	\right)
+%	\right]+\mathrm{O}	(\epsilon_i^4)
+%	\end{equation}
+%}
+%\hi{
+%	No solution
+%}
 %
 For very short waves ($\delta_x \gg 1$), these relations simplify to:
 \[
@@ -409,25 +404,25 @@ For very short waves ($\delta_x \gg 1$), these relations simplify to:
 ,\quad
 \omega^2\approx \delta_x
 \]
-\nhi{
-	\[
-	\delta_{z,i}\approx \delta_x
-	-\frac{1}{2}\left(
-	\epsilon_i^2
-	\right)
-	,\quad
-	\omega^2\approx \delta_x
-	\]
-}
-\hi{
-	No solution
-}
+%\nhi{
+%	\[
+%	\delta_{z,i}\approx \delta_x
+%	-\frac{1}{2}\left(
+%	\epsilon_i^2
+%	\right)
+%	,\quad
+%	\omega^2\approx \delta_x
+%	\]
+%}
+%\hi{
+%	No solution
+%}
 and we recover the frequency of short non hydrostatic waves $\omega^2 = \delta_x$ (or $\Omega=\sqrt{gk_x}$ in dimensional form) with a slightly modified vertical wavenumber.
 %
 %
 \subsection{Long waves}
 \label{SubSectionLongWavesrealdz}
-Here, we perform specific developments for long waves where the vertical profile is almost depth-independent $\delta_z \approx 0$, $\delta_z$ being either real or purely imaginary.
+Here, we perform specific developments for long waves where the vertical profile is almost depth-independent $\delta_z \approx 0$, $\delta_z$ being either real or pure imaginary.
 Inserting the boundary dispersion relation \ref{EqFullDisperb} into the inner dispersion relation \ref{EqFullDispera} and making a second-order Taylor expansion in $\delta_z$ leads to:
 \begin{equation}
 	\delta_z^2=\left(
@@ -442,27 +437,27 @@ Inserting the boundary dispersion relation \ref{EqFullDisperb} into the inner di
 	\label{deltazsurface}
 \end{equation}
 
-\nhi{
-\begin{equation}
-\delta_z^2=\left(
-\delta_{x,0}^2-\delta_x^2
-\right)
-\frac{1}{1+\epsilon_i^2/3}+\mathrm{O}(\delta_z^4)
-\qquad\hbox{with }
-\delta_{x,0}^2
-=
-\epsilon_i^2
-\end{equation}}
-\hi{
-	\begin{equation}
-	\delta_z^2=
-	\delta_{x,0}^2
-	\frac{1}{1+\epsilon_i^2/3}+\underline{\underline{\mathrm{O}({\epsilon_i}^4)}}
-	\qquad\hbox{with }
-	\delta_{x,0}^2
-	=
-	\epsilon_i^2
-	\end{equation}}
+%\nhi{
+%\begin{equation}
+%\delta_z^2=\left(
+%\delta_{x,0}^2-\delta_x^2
+%\right)
+%\frac{1}{1+\epsilon_i^2/3}+\mathrm{O}(\delta_z^4)
+%\qquad\hbox{with }
+%\delta_{x,0}^2
+%=
+%\epsilon_i^2
+%\end{equation}}
+%\hi{
+%	\begin{equation}
+%	\delta_z^2=
+%	\delta_{x,0}^2
+%	\frac{1}{1+\epsilon_i^2/3}+\underline{\underline{\mathrm{O}({\epsilon_i}^4)}}
+%	\qquad\hbox{with }
+%	\delta_{x,0}^2
+%	=
+%	\epsilon_i^2
+%	\end{equation}}
 %
 $\delta_{x,0}$ is the value of $\delta_x$ for which $\delta_z=0$ is a solution of the inner and boundary dispersion relations. At first order in $(\epsilon_i^2+\epsilon_a^2)$, $\delta_{x,0}$ is equal to $\epsilon_i$.
 The corresponding frequency can be obtained by inserting the approximation of the vertical wavenumber given by \ref{deltazsurface} into the boundary relation dispersion \ref{EqFullDisperb}. An approximation at second order in $\delta_x^2$ and $(\epsilon_i^2+\epsilon_a^2)$ is:
@@ -478,32 +473,32 @@ The corresponding frequency can be obtained by inserting the approximation of th
 	+\mathrm{O}(\delta_x)^4.
 	\label{eqomegalongwavereal}
 \end{equation}
-\nhi{
-	\begin{equation}
-	\omega^2 = \delta_x^2 \left(
-	1
-	+\frac{1}{3}\left(
-	\epsilon_i^2
-	\right)+
-\frac{1}{45}\epsilon_i^4
-	+\mathrm{O}(\epsilon_i^6)
-	\right)
-	+\mathrm{O}(\delta_x)^4.
-	\end{equation}
-}
-\hi{
-	\begin{equation}
-	\omega^2 = \delta_x^2 \left(
-	1
-	+\frac{1}{3}\left(
-	\epsilon_i^2
-	\right)+
-	\frac{1}{45}\epsilon_i^4
-	+\mathrm{O}(\epsilon_i^6)
-	\right)
-	, \quad \forall \delta_x
-	\end{equation}
-}
+%\nhi{
+%	\begin{equation}
+%	\omega^2 = \delta_x^2 \left(
+%	1
+%	+\frac{1}{3}\left(
+%	\epsilon_i^2
+%	\right)+
+%\frac{1}{45}\epsilon_i^4
+%	+\mathrm{O}(\epsilon_i^6)
+%	\right)
+%	+\mathrm{O}(\delta_x)^4.
+%	\end{equation}
+%}
+%\hi{
+%	\begin{equation}
+%	\omega^2 = \delta_x^2 \left(
+%	1
+%	+\frac{1}{3}\left(
+%	\epsilon_i^2
+%	\right)+
+%	\frac{1}{45}\epsilon_i^4
+%	+\mathrm{O}(\epsilon_i^6)
+%	\right)
+%	, \quad \forall \delta_x
+%	\end{equation}
+%}
 %
 \paragraph{$\boldsymbol{\delta_x \le \delta_{x,0}}$: barotropic mode}
 For $\delta_x \le \delta_{x,0} \approx \epsilon_i$, $\delta_z$ given by \ref{deltazsurface} is real. This implies that $\omega^2 \approx \delta_x^2 \le \epsilon_i\, \delta_x \le \frac{\epsilon_i}{\epsilon_a}\delta_x$ (since $\epsilon_a < 1$) and, thus, using the bounds on $\omega_-^2, \omega_+^2$ given by \ref{boundedomega2}, that these waves are always issued from the internal-wave branch ($\omega_-^2$), not from the acoustic-wave branch ($\omega_+^2$). In other words, there is no intersection between the boundary dispersion relation and the (real) acoustic-wave branch for $\delta_z$ close to zero.
@@ -511,13 +506,13 @@ These waves can be seen as the barotropic mode ($n=0$) solution of the internal 
 %
 \paragraph{$\boldsymbol{\delta_x \ge \delta_{x,0}}$: long surface waves}
 For $\delta_x \ge \delta_{x,0}$ (but still small), $\delta_z$ given by \ref{deltazsurface} is purely imaginary. These long waves originate from the surface-wave branch.
-When $\delta_x$ increases, \ref{deltazsurface} converges to \ref{longMSW}, which is a better approximation for medium and short surface waves.
-Figure \oldref{dz2dx} shows $\delta_z^2$ as a function of $\delta_x$ (for $\delta_x \le 0.04\approx 2\epsilon_i$). The two approximations given by \ref{deltazsurface}, accurate for long waves, and \ref{longMSW}, accurate for medium/short waves, are plotted. On Figure \oldref{dzdx}, the modulus of the vertical wavenumber is shown on a larger interval for $\delta_x$ (for $\delta_x \le 0.08\approx 4\epsilon_i$).
+When $\delta_x$ increases, \ref{deltazsurface} converges to \ref{longMSW} (see Fig. \ref{dzdx}), which is a better approximation for medium and short surface waves.
+Figure \oldref{dz2dx} shows $\delta_z^2$ as a function of $\delta_x$ (for $\delta_x \le 2\epsilon_i \approx 0.04$ ). The two approximations given by \ref{deltazsurface}, accurate for long waves, and \ref{longMSW}, accurate for medium/short waves, are plotted. On Figure \oldref{dzdx}, the modulus of the vertical wavenumber is shown on a larger interval for $\delta_x$ ($\delta_x \le 4\epsilon_i \approx 0.08$).
 \begin{figure}[h]
 	\centerline{
 		\includegraphics[width=0.9\linewidth]{FIGURES/dz2dx.png}
 	}
-\caption{Long waves: squared vertical wavenumber $\delta_z^2$ as a function of the horizontal wavenumber $\delta_x$. The interval where $\delta_z^2$ is positive ($\delta_z$ real), for $\delta_x\le \delta_{x,0}$, corresponds to the barotropic mode while for $\delta_x\ge \delta_{x,0}$, $\delta_z^2$ is negative ($\delta_z$ purely imaginary), corresponding to the surface-wave branch. The blue curve is the accurate approximation for long waves given by \ref{deltazsurface}, while the dashed orange curve is the approximation of surface waves given by \ref{longMSW}, which is more accurate for medium/short surface waves. An exact solution can be numerically computed (not shown) and is visually not distinguishable from the blue curve (accurate approximation).}
+\caption{Long waves: squared vertical wavenumber $\delta_z^2$ as a function of the horizontal wavenumber $\delta_x$. The interval where $\delta_z^2$ is positive ($\delta_z$ real), for $\delta_x\le \delta_{x,0}$, corresponds to the barotropic mode while for $\delta_x\ge \delta_{x,0}$, $\delta_z^2$ is negative ($\delta_z$ purely imaginary), corresponding to the surface-wave branch. The blue curve is the accurate approximation for long waves given by \ref{deltazsurface}, while the dashed orange curve is the approximation of surface waves given by \ref{longMSW}, which is more accurate for medium/short surface waves. An exact solution can be numerically computed (not shown) and is visually not distinguishable from the blue curve (accurate approximation for long waves).}
 \label{dz2dx}
 \end{figure}
 \begin{figure}[h]
@@ -538,11 +533,11 @@ Figure \oldref{omegadx} presents the frequency $\omega$ as a function of the hor
 	\caption{Frequency $\omega$ as a function of $\delta_x$ the horizontal wavenumber for different approximations.}
 	\label{omegadx}
 \end{figure}
+\paragraph{Remark on Lamb Waves and surface acoustic-gravity waves}
+In \ref{GPE}, horizontally propagating acoustic waves (Lamb Waves) have been discarded due to the existence of the free surface boundary condition which links the evolution of the surface pressure with the vertical velocity. If, instead of a free surface, a rigid lid boundary condition is imposed, Lamb waves are recovered and replace the surface waves studied above: while in an incompressible ocean, the rigid lid assumption modifies the barotropic external wave in a wave with an infinite speed, in a compressible ocean, its transforms a surface wave in a Lamb wave.  Also note that in the rigid lid case, both the internal and acoustic modes have a vertical wavenumbers given by $\delta_{z,n} = n\pi, \delta_{z,m} = m\pi$.\\
+In the general case of a free surface boundary condition, there are similarities between surface waves and Lamb waves: their frequencies lie between those of internal and acoustic modes and they are vertically evanescent.
 
-
-\textit{Orders of magnitudes:}\\
-For the $4000$m-deep reference ocean (Table \oldref{TableParameters}), the horizontal length scale associated with the transformation of the MSW into the long MIM $(\lambda_{x,lmsw}=2\pi/(\delta_{x,lmsw}/4000))$ reaches $1367$ km against $62$ km for the same $10$m-deep ocean. When $\delta_x$ decreases below $\delta_{x,lmsw}$, $\delta_z$ increases monotonically to a maximum value $\delta_{z,lmsw}(\delta_x=0)$. This vertical length scale reaches $1379$ km for the $4000$m-deep reference ocean and $62$ km for the same $10$m-deep ocean. A rule can be formulated as: the longer the horizontal length scale of the oscillation, the shorter its vertical length scale; and the weaker the stratification (vanishing $\epsilon_i$) the longer its horizontal length-scale $\lambda_{x,lmsw}$. This long MIM solution is a low-frequency oscillation of the ocean due to gravity and associated with ocean stratification. It disappears when stratification vanishes and the ocean becomes an homogeneous layer of water. It does persist in an incompressible ocean but is slightly modified by compressibility.
-
+%\cite{Garret1969}
 %\subsection{Close-to-singular MSW}
 %
 %The condition for propagation $(\displaystyle R^2(\delta_x,\delta_z)\le \frac{1}{4})$ derived in Section \ref{SubSectionFactoDisp} has so far been left out since for pulsations $\omega$ to remain real in the inner dispersion relation \ref{EqFullDispera}, it must necessarily be satisfied.  This condition is automatically satisfied for real horizontal and vertical wave-numbers but not necessarily for pure-imaginary vertical wave-numbers.\\
@@ -597,7 +592,56 @@ For the $4000$m-deep reference ocean (Table \oldref{TableParameters}), the horiz
 
 
 \subsection{Summary: waves solutions in a bounded ocean}
-Table \oldref{TableWavesolutions_boundedmodified} summarizes the main results of this paper. Approximations for the different type of waves (acoustic, gravity and surface waves/modes) are indicated in their dimensional form. For sake of readability, some of the relations given in Table \oldref{TableWavesolutions_boundedmodified} are lower order versions of our derivations. They generally stem from first-order correction terms, compared with usual dispersion relations introduced in Table \oldref{TableWave solutions}. In that case, a red link to the higher approximation is given.
+\label{summarybounded}
+In section \ref{SectionInner} on waves in an unbounded ocean,
+we have seen that for the case of real vertical wavenumber ({\it vertically propagating waves}) \ref{realwavenumber}
+internal and acoustic waves are well separated except for long waves ($\delta_z \approx 0$). We have here studied the consequences of the added surface dispersion relation.\\
+At low frequency, modified internal gravity modes (MIM) have their frequencies bounded by above by the buyoancy frequency $\omega_- \le \omega_{c,i} = \epsilon_i$ (i.e. $\Omega_{c,i}=N$). $\omega_{c,i}$ is the internal cut off frequency. Compressibility effects on internal-gravity modes (MIM) are negligible \ref{SubSectionGraphicMIW}. In comparison with the textbook rigid lid approximated dispersion relation of MIM, the free surface boundary condition brings a small modification to their vertical wavenumbers and associated frequencies.\\
+At high frequency, modified acoustic modes (MAM) have their frequencies bounded by below by the acoustic cut-off frequency $\omega_{c,a}$, $\omega_+ \ge \omega_{c,a}$ with is attained in the case of a bounded ocean for $\delta_x=0, \delta_z=\pi/2$ and writes $\omega_{c,a}^2=\frac{1}{\epsilon_a^2}\left((\pi/2)^2+\epsilon_a^2+\epsilon_i^2\right)$ (which is found by minimizing values of $\omega$ satisfying Eq. \oldref{ParamallMAM2}) (or $\Omega_{c,a}^2=\left(\frac{c_s}{H}\right)^2\left(\left(\frac{\pi}{2}\right)^2+\epsilon_a^2+\epsilon_i^2\right)$). Again, stratification effects are small and the lowest order modification from the usual dispersion relation comes from the presence of a free surface boundary condition.
+\\
+The free surface branch, which corresponds to pure imaginary wavenumber ({\it vertically evanescent waves}), has been described in section \ref{SubSectionGraphicMSW}. Here the acoustic and internal gravity branches are not well separated. When frequency is increased, modified surface waves (MSW) can change from surface waves modified by stratification to surfaces waves modified by compressibility. The crossing point is attained when $\omega^2=\frac{\epsilon_i}{\epsilon_a}\delta_x$. For the case of the bounded ocean here, only one triplet $\left(\delta_{x,\star}, \delta_{z,\star}, \omega_\star\right)$ can satisfy this relation. Since for free surface waves, $\omega^2$ is well approximated by $\omega^2=\delta_x\tanh(\delta_x)$, this neutral point exist only when $\exists \delta_x$ s.t. $\tanh(\delta_x)\approx \frac{\epsilon_i}{\epsilon_a}$ which requires $\epsilon_i \le \epsilon_a$. When $\epsilon_i \ge \epsilon_a$, the free surface waves branch always issues from the internal gravity wave branch. We also have noted that in a rigid lid approximation where this family of surface waves cannot exist, they are replaced by Lamb waves with a frequency of $\Omega=c_sk_x$.
+
+The case of long waves ($\delta_z \approx 0$) have been addressed in details separately \ref{SubSectionLongWavesrealdz}. The interplay between compressibility, stratification and free surface is more pronounced here. There is a transition between the vertically propagating barotropic mode (LMIM) for very long horizontal waves to vertically evanescent surface waves for higher horizontal wavenumbers (LMSW). This transition has been fully characterized and occurs at a point where $\delta_x=\delta_{x,0}\approx \epsilon_i$ given by \ref{deltazsurface} and where the frequency is closed to the maximum value of internal waves $\Omega \approx N$.
+
+\textit{Orders of magnitudes:}\\
+ Orders of magnitudes for the characteristic horizontal/vertical length scales and frequencies introduced above are given in table \ref{TableOrdersMag} for the reference ocean (parameters of table \ref{TableParameters}), for a shallow ocean $H=10$m and for a strongly stratified ocean $N=10^{-2}$s$^{-1}$.
+ \newpage
+\begin{table}[h]
+	%\centerline{
+	\begin{tabular}{l|l|l|l|l}
+		& \textit{Notation}   & \textit{Reference} & \textit{10-m-deep} & \textit{$N=10^{-2}\ s^{-1}$}\\
+		&&($H=4000$m, $N=10^{-3}$)&&
+		\\ \hline
+		Parameters & $\epsilon_a$ &
+		$0.132$ &
+		$6.6\  10^{-3}$ & $0.13$\\
+		& $\epsilon_i$ &
+		$0.0202$ &
+		$1.0\ 10^{-3}$ & $0.20$\\\hline
+		\specialrule{0pt}{2pt}{0pt}
+		Acoustic cut-off&$T_{c,a}=2\pi \sqrt{H/g} /\omega_{c,a}$ & $10.6\ {\rm s}$ & $0.026\ {\rm s}$ & $10.5\ {\rm s}$\\\hline
+		\specialrule{0pt}{2pt}{0pt}
+		Internal cut-off& $T_{c,i}=2\pi \sqrt{H/g} /\omega_{c,i}$& $1.7\ {\rm h}$ & $1.7\ {\rm h}$ & $10.5\ {\rm mn}$\\\hline
+		\specialrule{0pt}{2pt}{0pt}
+		LMIM-LMSW cut-off & $\lambda_{x,0}=2\pi H/\delta_{x,0}$& $1367\  {\rm km}$ & $62\ {\rm km}$ & $123\  {\rm km}$\\
+		& $T_{x,0}=2\pi \sqrt{H/g} / \omega_{x,0}$ & $1.9\ {\rm h}$ & $1.7\ {\rm h}$ & $10.5\ {\rm mn}$\\\hline
+	%	\specialrule{0pt}{2pt}{0pt}
+%		LMIM-$\delta_z(0)$ & $2\pi H/\delta_{z,0}$& $1379\ km$ & $62\ km$& $125\ km$\\
+%		& $2\pi \sqrt{g/H} \omega_{z,0}$ & $\infty$& $\infty$ & $\infty$\\ \hline
+		\specialrule{0pt}{2pt}{0pt}
+		MSW-neutral point & $\lambda_{x,*}=2\pi H/\delta_{x,*}$& $161\ {\rm km}$ & $411\ {\rm m}$ & X\\
+		&$\lambda_{z,*}=2\pi H/\delta_{z,*}$ & $164\ {\rm km}$ & $411\ {\rm m}$&X\\
+		&$T_{*}=2\pi \sqrt{H/g}/ \omega_{*}$ &$14\ {\rm mn}$&$41.7\ {\rm s}$&X\\
+	\end{tabular}
+	%}
+	\caption{Orders of magnitude of various scales in term of horizontal/vertical length scales and wave periods.
+		%Notations refer to non-dimensional variables whereas orders of magnitude are given for dimensional quantities.
+		Parameters for the "\textit{Reference}" ocean are given in Table \ref{TableParameters}. "\textit{10-m-deep}" ocean is a  10-m-deep \textit{Reference} ocean and "$N=10^{-2}\ s^{-1}$" refers to a \textit{"Reference"} ocean with $N=10^{-2}\ s^{-1}$.} 
+	\label{TableOrdersMag}
+\end{table}
+
+Table \oldref{TableWavesolutions_boundedmodified} summarizes the main results of this paper. Approximations for the different type of waves (acoustic, gravity and surface waves/modes) are indicated in their dimensional form. For sake of readability, some of the relations given in Table \oldref{TableWavesolutions_boundedmodified} are lower order versions of our derivations. They generally stem from first-order correction terms, compared with usual dispersion relations introduced in Table \oldref{TableWave solutions}. In that case, a red link to the higher approximation is given.\\
+Corresponding analytical solutions for the vertical profiles of $u, w, p, \rho$ are given in Appendix \ref{solutionana}.
 \begin{table}[!h]
 	\centerline{
 			\setlength{\extrarowheight}{30pt}
@@ -692,40 +736,109 @@ $\displaystyle i k_x \sqrt{1-\frac{1}{k_x}\left(
 \frac{g}{c_s^2}\tanh(Hk_x)
 \right)}$
 	\end{tabular}}}
-	\caption{{\color{red}corriger legende ...}Compressibility and stratification induced modifications to the usual dispersion relations given in table \ref{TableWave solutions}. $\Omega$ is wave angular frequency, $k_x$ and $k_z$ are wavenumbers, $g$ is the acceleration of gravity, $N$ a reference Brunt-V\"ais\"al\"a frequency and $c_s$ the speed of sound. $D_0$ is the background density vertical scale and is given by $1/D_0=N^2/g+g/c_s^2$}
+	\caption{Compressibility and stratification induced modifications to the usual dispersion relations given in table \ref{TableWave solutions}. $\Omega$ is wave angular frequency, $k_x$ and $k_z$ are wavenumbers, $g$ is the acceleration of gravity, $H$ the water depth, $N$ a reference Brunt-V\"ais\"al\"a frequency and $c_s$ the speed of sound. $\epsilon_i^2=\frac{N^2H}{g}, \epsilon_a^2=\frac{gH}{c_s^2}$.}
 	\label{TableWavesolutions_boundedmodified}
 \end{table}
 \newpage
-{\color{red}FIN MODIFS LAURENT}
+%\begin{table}[!h]
+%	\centerline{
+%		\setlength{\extrarowheight}{30pt}
+%		\rotatebox{90}{
+%			\begin{tabular} {p{3.0cm}|p{8.6cm}|p{8cm}}
+%				Waves &  Frequency $(\Omega)$ & Vertical wavenumber $k_z$\\\hline
+%				\begin{minipage}{3cm}
+%					Modified Acoustic Modes (MAM)\\
+%					$\small k_{z,m}=\frac{1}{H}(\pi/2+m\pi), m\ge 0$\\
+%					\ref{SubSectionGraphicMAW}
+%				\end{minipage}&
+%				$\displaystyle \Omega_{mam}^2=c_s^2(k_x^2+k_z^2)
+%				\left[
+%				1-\frac{g}{Hc_s^2}\frac{k_x^2-k_{z,m}^2}{(k_x^2+k_{z,m}^2)^2}+\frac{N^2}{gH}\frac{1}{k_x^2+k_{z,m}^2}
+%				\right]$&
+%				$\displaystyle
+%				k_{z,m}
+%				\left[
+%				1-\frac{g}{Hc_s^2}\frac{k_x^2-k_{z,m}^2}{2(k_x^2+k_{z,m}^2)k_{z,m}^2}
+%				+\frac{N^2}{2gH^2}\frac{1}{k_{z,m}^3}
+%				\right]
+%				$\quad {\color{red}\ref{ParamallMAM1}}	
+%				\\[8mm] \hline
+%				\begin{minipage}{3cm}
+%					Modified Internal Modes (MIM)\\
+%					$k_{z,n}=\frac{1}{H}(n\pi), m\ge 1$\\
+%					\ref{SubSectionGraphicMIW}
+%				\end{minipage}
+%				& $\displaystyle \Omega_{mim}^2=\frac{N^2 k_x^2}{k_x^2+k_{z,n}^2}
+%				\left[
+%				1-2\frac{N^2}{gH}\frac{k_{z,n}^2}{(k_x^2+k_{z,n}^2)^2}
+%				\right]
+%				$
+%				&
+%				$\displaystyle
+%				k_{z,n}
+%				\left[
+%				1+\frac{N^2}{gH}
+%				\frac{1}{k_x^2+k_{z,n}^2}
+%				+\left(\frac{N^2}{gH}\right)^3
+%				\frac{(k_x^2-k_{z,n}^2)}{(k_x^2+k_{z,n}^2)^3}
+%				\right]
+%				$		\\[8mm] \hline
+%				\begin{minipage}{3cm}
+%					Barotropic mode\\
+%					$k_x\le k_{x,0}\approx \frac{N^2}{g}$\\
+%					\ref{SubSectionLongWavesrealdz}
+%				\end{minipage}&
+%				$\Omega^2 = gHk_x^2 \left[
+%				1
+%				-\frac{1}{6}\left(
+%				\epsilon_i^2+3\epsilon_a^2
+%				\right)
+%				\right]$\qquad {\color{red}\ref{eqomegalongwavereal}}&
+%				$\displaystyle \sqrt{k_{x,0}^2-k_x^2}$
+%				\qquad
+%				{\color{red}\ref{deltazsurface}}
+%				\\[8mm] \hline
+%				\begin{minipage}{3cm}
+%					Long\\
+%					surface waves\\
+%					$k_x\ge k_{x,0}\approx \frac{N^2}{g}$\\
+%					\ref{SubSectionLongWavesrealdz}
+%				\end{minipage}
+%				&$\Omega^2 = gHk_x^2 \left[
+%				1
+%				-\frac{1}{6}\left(
+%				\epsilon_i^2+3\epsilon_a^2
+%				\right)
+%				\right]$\qquad {\color{red}\ref{eqomegalongwavereal}}&
+%				$\displaystyle i\sqrt{k_x^2-k_{x,0}^2}$
+%				\qquad
+%				{\color{red}\ref{deltazsurface}}
+%				\\[8mm] \hline
+%				\begin{minipage}{3cm}
+%					Medium and short\\
+%					surface waves\\
+%					$k_x\ge k_{x,0}\approx \frac{N^2}{g}$
+%					\\
+%					\ref{SubSectionGraphicMSW}
+%				\end{minipage}
+%				&
+%				$\displaystyle
+%				\Omega^2=
+%				gk_x\tanh(Hk_x)$
+%				\qquad
+%				{\color{red}\ref{eqomegasurfacewaves}}
+%				&
+%				$\displaystyle i k_x \sqrt{1-\frac{1}{k_x}\left(
+%					\frac{N^2}{g\tanh(Hk_x)}
+%					+
+%					\frac{g}{c_s^2}\tanh(Hk_x)
+%					\right)}$
+%	\end{tabular}}}
+%	\caption{Compressibility and stratification induced modifications to the usual dispersion relations given in table \ref{TableWave solutions}. $\Omega$ is wave angular frequency, $k_x$ and $k_z$ are wavenumbers, $g$ is the acceleration of gravity, $H$ the water depth, $N$ a reference Brunt-V\"ais\"al\"a frequency and $c_s$ the speed of sound. $\epsilon_i^2=\frac{N^2H}{g}, \epsilon_a^2=\frac{gH}{c_s^2}$.}
+%	\label{TableWavesolutions_boundedmodifiedNHHI}
+%\end{table}
+%\newpage
 %%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Table order of magnitude
 %%%%%%%%%%%%%%%%%%%%%%%%%%%
-\begin{table}[h]
-	%\centerline{
-	\begin{tabular}{l|l|l|l|l}
-		& \textit{Notation}   & \textit{Reference} & \textit{10-m-deep} & \textit{$N=10^{-2}\ s^{-1}$}\\\hline
-		Parameters & $\epsilon_a$ &
-		$0.13$ &
-		$6.6\  10^{-3}$ & $0.13$\\
-		& $\epsilon_i$ &
-		$2.0\ 10^{-2}$ &
-		$1.0\ 10^{-3}$ & $0.20$\\\hline
-		\specialrule{0pt}{2pt}{0pt}
-		Acoustic cut-off&$2\pi \sqrt{H/g} /\omega_{c,a}$ & $30\ mn$ & $30\ mn$ & $9.6\ mn$\\\hline
-		\specialrule{0pt}{2pt}{0pt}
-		Internal cut-off& $2\pi \sqrt{H/g} /\omega_{c,i}$& $1.7\ h$ & $1.7\ h$ & $10.5\ mn$\\\hline
-		\specialrule{0pt}{2pt}{0pt}
-		LMIM-LMSW cut-off & $2\pi H/\delta_{x,0}$& $1367\ km$ & $1000\ km$ & $123\ km$\\
-		& $2\pi \sqrt{H/g} \omega_{x,0}$ & $1.9\ h$ & $1.7\ h$ & $10.5\ mn$\\\hline
-		\specialrule{0pt}{2pt}{0pt}
-		LMIM-$\delta_z(0)$ & $2\pi H/\delta_{z,0}$& $1379\ km$ & $62\ km$& $125\ km$\\
-		& $2\pi \sqrt{H/g} \omega_{z,0}$ & $\infty$& $\infty$ & $\infty$\\ \hline
-		\specialrule{0pt}{2pt}{0pt}
-		MSW-neutral point & $2\pi H/\delta_{x,*}$& $161\ km$ & $407\ m$ & $123\ km$\\
-		&$2\pi H/\delta_{z,*}$ & $164\ km$ & $407\ m$&$2148\ km$\\
-		&$2\pi \sqrt{H/g} \omega_{*}$ &$12\ mn$&$41.3\ s$&$10.5\ mn$\\
-	\end{tabular}
-	%}
-	\caption{orders of magnitude of various scales. Notations refer to non-dimensional variables whereas orders of magnitude are given for dimensional quantities. Parameters for the "\textit{Reference}" ocean are given in Table \ref{TableParameters}. "\textit{10-m-deep}" ocean is a  10-m-deep \textit{Reference} ocean and "$N=10^{-2}\ s^{-1}$" refers to a \textit{"Reference"} ocean with $N=10^{-2}\ s^{-1}$.} 
-	\label{TableOrdersMag}
-\end{table}
+

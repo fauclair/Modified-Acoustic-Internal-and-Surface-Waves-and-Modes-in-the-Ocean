@@ -1,65 +1,44 @@
 \appendix
 \section{$\delta_z$ real or purely imaginary}
 \label{kzreal}
-Starting from
-\[
-\begin{array}{rcl}
-F''(z)
-+
-k_z^2
-F(z)&=&0\\
-\displaystyle
-F'(0)+\left(
-\frac{1}{2 D_0}-\frac{gk_x^2}{\Omega^2}
-\right) F(0)&=&0\\[4mm]
-\displaystyle
-F(-H)&=&0
-\end{array}
-\]
-with $\displaystyle k_z^2=\left(k_x^2\frac{N^2-\Omega^2}{\Omega^2}
-+\frac{\Omega^2}{c_s^2}-\frac{1}{4D_0^2}\right)$.\\
-Let $\displaystyle s=\frac{z+H}{H}$ and $G(s(z))=F(z)$ we write:
-\[
-\begin{array}{rcl}
-G''(s)
-+
-(Hk_z)^2
-G(s)&=&0\\
-\displaystyle
-G'(1)+\left(
-\frac{H}{2 D_0}-\frac{gHk_x^2}{\Omega^2}
-\right) G(1)&=&0\\[4mm]
-\displaystyle
-G(0)&=&0
-\end{array}
-\]
-Introducing $\displaystyle \epsilon_i^2=\frac{N^2H}{g}, \epsilon_a^2=\frac{gH}{c_s^2},\delta_x=k_xH,\delta_z=k_zH,\omega=\Omega\sqrt{\frac{H}{g}}$ and using $\displaystyle \frac{H}{D_0}=\epsilon_i^2+\epsilon_a^2$
+In this section, we prove that under the condition of smallness of parameters $\epsilon_i$ and $\epsilon_a$, $\delta_z$ is either real or pure imaginary and thus that the frequency $\omega$ is real.\\
+The eigenvalue problem \ref{EqDimF} and the surface boundary condition \ref{EqDimFb} are rewritten in non-dimensional form as:
 \begin{align}
 G''(s)
 +
 \delta_z^2
 G(s)&=0 \label{sturm1}\\
-G'(1)+\left(
-\frac{\epsilon_i^2+\epsilon_a^2}{2}-\frac{\delta_x^2}{\omega^2}
-\right) G(1)&=0 \label{sturm2}\\
+G(1)&=1 \label{sturm2}\\
 G(0)&=0 \label{sturm3}
 \end{align}
-with $\displaystyle \delta_z^2=\left(\delta_x^2\frac{\epsilon_i^2-\omega^2}{\omega^2}
-+\epsilon_a^2\omega^2-\frac{(\epsilon_i^2+\epsilon_a^2)^2}{4}\right)$\\
+\begin{equation}
+G'(1)+\left(
+\frac{\epsilon_i^2+\epsilon_a^2}{2}-\frac{\delta_x^2}{\omega^2}
+\right) G(1)=0
+\label{eqnormal}
+\end{equation}
+where $\displaystyle s=\frac{z+H}{H}$, $G(s(z))=F(z)$ and $\displaystyle \epsilon_i^2=\frac{N^2H}{g}, \epsilon_a^2=\frac{gH}{c_s^2},\delta_x=k_xH,\delta_z=k_zH,\omega=\Omega\sqrt{\frac{H}{g}}$.\\
+$\delta_z$ is linked to $\delta_x$ and $\omega$ by the inner dispersion relation
+\begin{equation}
+\delta_z^2=\left(\delta_x^2\frac{\epsilon_i^2-\omega^2}{\omega^2}
++\epsilon_a^2\omega^2-\frac{(\epsilon_i^2+\epsilon_a^2)^2}{4}\right)
+\label{innerannex}
+\end{equation}
 Multiplying \ref{sturm1} by $\overline{G(s)}$ and integrating over $[0,1]$ we get:
 \[
-\int_0^1G''(s)\overline{G(s)}+\delta_z^2\int_0^1|G(s)|^2=0
+\int_0^1G''(s)\overline{G(s)}{\rm d}s+\delta_z^2\int_0^1|G(s)|^2{\rm d}s=0
 \]
+Integration by parts leads to:
 \[
--\int_0^1|G'(s)|^2+\delta_z^2\int_0^1|G(s)|^2+G'(1)\overline{G(1)}-G'(0)\overline{G(0)}=0
+-\int_0^1|G'(s)|^2{\rm d}s+\delta_z^2\int_0^1|G(s)|^2{\rm d}s+G'(1)\overline{G(1)}-G'(0)\overline{G(0)}=0
 \]
-and using \ref{sturm2}, \ref{sturm3}
+and using \ref{sturm2}, \ref{sturm3}, \ref{eqnormal}
 \[
-\delta_z^2 \int_0^1|G(s)|^2+\left(\frac{\delta_x^2}{\omega^2}-
+\delta_z^2 \int_0^1|G(s)|^2{\rm d}s+\left(\frac{\delta_x^2}{\omega^2}-
 \frac{\epsilon_i^2+\epsilon_a^2}{2}
-\right)|G(1)|^2=\int_0^1|G'(s)|^2
+\right)=\int_0^1|G'(s)|^2{\rm d}s
 \]
-Using the Poincar\'e inequality $\displaystyle \int_0^1|G(s)|^2\le \int_{0}^1|G'(\sigma)|^2d\sigma$ and $\displaystyle |G(1)|^2 \le \int_{0}^1|G'(\sigma)|^2d\sigma$, we obtain:
+Using the Poincar\'e inequality $\displaystyle \int_0^1|G(s)|^2{\rm d}s\le \int_{0}^1|G'(s)|^2{\rm d}s$ and $\displaystyle 1=|G(1)|^2 \le \int_{0}^1|G'(s)|^2 {\rm d}s$, we obtain:
 \begin{equation}
 \delta_z^2 \mu + \left(
 \frac{\delta_x^2}{\omega^2}-\frac{\epsilon_i^2+\epsilon_a^2}{2}
@@ -67,22 +46,23 @@ Using the Poincar\'e inequality $\displaystyle \int_0^1|G(s)|^2\le \int_{0}^1|G'
 \nu = 1
 \label{sturm4}
 \end{equation}
-with $\mu \le 1$ and $\nu \le 1$.\\
-Taking the imaginary part of \ref{sturm4}
+with $0\le \mu \le 1$ and $0\le \nu \le 1$.\\
+Taking the imaginary part of \ref{sturm4} and using \ref{innerannex}
 \[
 \mu \left( \epsilon_a^2 \Im[\omega^2] +\delta_x^2 \epsilon_i^2 \Im[1/\omega^2]\right)+\nu \delta_x^2\Im[1/\omega^2]=0
 \]
 or, using $\Im[1/\omega^2]=-\Im[\omega^2]/|\omega|^4$,
-\[
+\begin{equation}
 \Im[\omega^2]\left(\mu \left(\epsilon_a^2 -\epsilon_i^2 \frac{\delta_x^2}{|\omega|^4} \right) -\nu \frac{\delta_x^2}{|\omega|^4} \right)=0
-\]
-Let's suppose that $\Im[\omega^2] \ne 0$. We will show below that, in this case, solutions can exist only for non physical values of $\epsilon_i, \epsilon_a$ satisfying $\max(\epsilon_i,\epsilon_a) > \sqrt{2}$.\\
-If $\Im[\omega^2] \ne 0$, we deduce that
+\label{constraint1}
+\end{equation}
+Let us assume that $\omega$ is neither real or pure imaginary. This implies $\Im[\omega^2] \ne 0$ and \ref{constraint1} leads to:
 \begin{equation}
 \mu\left(\epsilon_a^2\frac{|\omega|^4}{\delta_x^2} -\epsilon_i^2\right)-\nu=0
 \label{eqmunu1}
 \end{equation}
-Now taking the real part:
+We will show below that, in this case, solutions can exist only for non physical values of $\epsilon_i, \epsilon_a$ satisfying $\max(\epsilon_i,\epsilon_a) > \sqrt{2}$.\\
+Taking the real part of \ref{sturm4}
 \[
 \mu \left(-\delta_x^2+\delta_x^2\epsilon_i^2\Re[1/\omega^2]-\frac{(\epsilon_i^2+\epsilon_a^2)^2}{4}+\epsilon_a^2 \Re[\omega^2]\right)
 +\nu \left(
@@ -94,9 +74,9 @@ or, using $\Re[1/\omega^2]=\Re[\omega^2]/|\omega|^4$,
 \mu \left(-\delta_x^2-\frac{(\epsilon_i^2+\epsilon_a^2)^2}{4}+(\frac{\delta_x^2\epsilon_i^2}{|\omega|^4}+\epsilon_a^2 )\Re[\omega^2]\right)
 +\nu \left(
 \frac{\delta_x^2}{|\omega|^4} \Re[\omega^2]-\frac{\epsilon_i^2+\epsilon_a^2}{2}
-\right)=1
+\right)=1.
 \]
-or using \ref{eqmunu1}
+\ref{eqmunu1} allows to simplify in:
 \begin{equation}
 \mu \left(-\delta_x^2-\frac{(\epsilon_i^2+\epsilon_a^2)^2}{4}+2\epsilon_a^2\Re[\omega^2] \right)
 -\nu \left(
@@ -104,8 +84,7 @@ or using \ref{eqmunu1}
 \right)=1
 \label{eqmunu2}
 \end{equation}
-Note that \ref{eqmunu2} implies $\Re[\omega^2]\ge 0$.\\
-Eqs \ref{eqmunu2} and \ref{eqmunu1} are summarized in 
+Eqs \ref{eqmunu1} and \ref{eqmunu2} can be summarized in 
 \begin{equation}
 \begin{array}{l}
 \alpha \mu  - \beta \nu = 1\\
@@ -123,9 +102,9 @@ Using $\beta > 0$, it is easy to check that \ref{eqmunu} has solutions $(\mu,\nu
 \]
 or
 \[
-0\le \gamma\le 1 \mbox{ and }\alpha > 1 + \beta \gamma
+0\le \gamma\le 1 \mbox{ and }\alpha \ge 1 + \beta \gamma
 \]
-And so in order to have $\Im[\omega^2]\ne 0$, the conditions above immediately exclude the cases $\epsilon_a=0$ (which leads to $\gamma \le 0$ ) and $\Re[\omega^2] \le 0$ (which leads to $\alpha \le 0$ ). They will not be considered below.
+The conditions above immediately exclude the cases $\epsilon_a=0$ (which leads to $\gamma < 0$ ) and $\Re[\omega^2] \le 0$ (which leads to $\alpha <  0$ ). They will not be considered below.
 \begin{itemize}
 	\item First case: $0\le \gamma \le 1$\\
 	This implies:
@@ -133,9 +112,9 @@ And so in order to have $\Im[\omega^2]\ne 0$, the conditions above immediately e
 	|\omega|^4 \le \frac{\delta_x^2}{\epsilon_a^2}(1+\epsilon_i^2)
 	\label{maj1}
 	\end{equation}
-	$\alpha > 1 + \beta \gamma$ writes:
+	$\alpha \ge 1 + \beta \gamma$ writes:
 	\[
-	\Re[\omega^2] > \frac{1}{2\epsilon_a^2}\left[
+	\Re[\omega^2] \ge  \frac{1}{2\epsilon_a^2}\left[
 	1+\delta_x^2+\frac{(\epsilon_a^2+\epsilon_i^2)^2}{4}
 	+\frac{\epsilon_i^2+\epsilon_a^2}{2}\left(
 	\epsilon_a^2\frac{|\omega|^4}{\delta_x^2} -\epsilon_i^2
@@ -166,7 +145,7 @@ And so in order to have $\Im[\omega^2]\ne 0$, the conditions above immediately e
 	\item Second case: $\gamma > 1$\\
 	This implies:
 	\begin{equation}
-	|\omega|^4 \ge \frac{\delta_x^2}{\epsilon_a^2}(1+\epsilon_i^2)
+	|\omega|^4 > \frac{\delta_x^2}{\epsilon_a^2}(1+\epsilon_i^2)
 	\label{maj2}
 	\end{equation}
 	$\alpha > (1 + \beta ) \gamma$ can be written as:
@@ -175,7 +154,7 @@ And so in order to have $\Im[\omega^2]\ne 0$, the conditions above immediately e
 	\]
 	or
 	\[
-	|\omega|^4 \le \frac{\delta_x^2}{\epsilon_a^2}\left[
+	|\omega|^4 < \frac{\delta_x^2}{\epsilon_a^2}\left[
 	\epsilon_i^2
 	+\frac{1}{1+\frac{\epsilon_a^2+\epsilon_i^2}{2}}
 	\left(
@@ -186,8 +165,8 @@ And so in order to have $\Im[\omega^2]\ne 0$, the conditions above immediately e
 	Now using $0 \le \Re[\omega^2] \le |\omega|^2$ and adding \ref{maj2}, we get:
 	\[
 	\frac{\delta_x^2}{\epsilon_a^2}(1+\epsilon_i^2)
-	\le
-	|\omega|^4 \le \frac{\delta_x^2}{\epsilon_a^2}\left[
+	<
+	|\omega|^4 < \frac{\delta_x^2}{\epsilon_a^2}\left[
 	\epsilon_i^2
 	+\frac{1}{1+\frac{\epsilon_a^2+\epsilon_i^2}{2}}
 	\left(
@@ -201,4 +180,4 @@ And so in order to have $\Im[\omega^2]\ne 0$, the conditions above immediately e
 	\]
 	which requires $\epsilon_a > \sqrt{2}$.
 \end{itemize}
-This concludes the proof. Adding the condition $\epsilon_a \ne 0$, we get. If $\epsilon_a=0$ or $\max(\epsilon_i,\epsilon_a)\le \sqrt{2}$, then $\Im[\omega^2]$ is zero. This also leads to $\Im[\delta_z^2]=0$ and so that $\delta_z$ is either real or purely imaginary.
+This concludes the proof. If $\epsilon_a=0$ or $\max(\epsilon_i,\epsilon_a)\le \sqrt{2}$, then $\Im[\omega^2]$ is zero. This also leads to $\Im[\delta_z^2]=0$ and we conclude that, under these conditions, $\delta_z$ is either real or purely imaginary.
